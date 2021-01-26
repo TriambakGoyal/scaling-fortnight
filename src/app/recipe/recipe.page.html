@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>recipe</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list >
+    <ion-card *ngFor="let i of recipe" routerLink="/recipe/{{i?.id}}">
+      <ion-card-header>
+        <ion-card-title>
+          {{i?.id}}
+        </ion-card-title>
+        <ion-card-subtitle>
+          {{i?.location}}
+        </ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <strong>{{i?.name}}</strong>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+
+</ion-content>
